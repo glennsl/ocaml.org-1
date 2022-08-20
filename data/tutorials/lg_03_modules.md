@@ -50,6 +50,9 @@ $ ocamlopt -c bmodule.ml
 $ ocamlopt -o hello amodule.cmx bmodule.cmx
 ```
 
+Note the the order of the arguments here matters. Modules with dependencies
+must be listed after the modules they depend.
+
 Now we have an executable that prints "Hello". As you can see, if you want to
 access anything from a given module, use the name of the module (always
 starting with a capital) followed by a dot and the thing that you want to use.
